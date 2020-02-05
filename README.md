@@ -16,8 +16,7 @@ nor what the exact passphrase might be.
 
 
 # Usage
-**PASSPHRASE** must be only letters from A-Z, due to how vigenere ciphers work.
-**ROTATION** parameters are numbers and expected to be between -26 and 26, and START < END
-```python main.py PASSPHRASE ROTATION_START ROTATION_END```
-
+**PASSPHRASE** must be only letters from A-Z, due to how vigenere ciphers work.  
+**ROTATION** parameters are numbers and expected to be between -26 and 26, and START < END  
+```python main.py PASSPHRASE ROTATION_START ROTATION_END```  
 This creates a file results_TIMESTAMP.txt
