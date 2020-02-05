@@ -70,8 +70,18 @@ def main():
   passphrase = str(sys.argv[1]).upper()
   isPassphraseAllowed = passphrase.isalpha()
 
-  if isPassphraseAllowed:
-    results = tryDifferentTabulas(z340_with_z408_solution, passphrase, -2, 2)
+  rot_start = int(sys.argv[2])
+  rot_end   = int(sys.argv[3])
+  isRotationAllowed = True
+  if (rot_start < -26 or rot_start > 26):
+    isRotationAllowed = False
+  if (rot_end < -26 or rot_end > 26):
+    isRotationAllowed = False
+  if (rot_start > rot_end):
+    isRotationAllowed = False
+
+  if isPassphraseAllowed and isRotationAllowed:
+    results = tryDifferentTabulas(z340_with_z408_solution, passphrase, rot_start, rot_end)
     writeToResults(results)
   else:
     print("Passphrase must contain letters from A-Z!")
