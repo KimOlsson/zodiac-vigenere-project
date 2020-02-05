@@ -20,3 +20,7 @@ nor what the exact passphrase might be.
 **ROTATION** parameters are numbers and expected to be between -26 and 26, and START < END  
 ```python main.py PASSPHRASE ROTATION_START ROTATION_END```  
 This creates a file results_TIMESTAMP.txt
+
+# Other notes
+
+The resulting file will contain multiple '?' due to the fact that z340 has some new symbols that weren't in z408.
